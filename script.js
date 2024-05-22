@@ -1,8 +1,7 @@
 'use strict';
 
-
-// name entry
-alert("Game made by Souptik Karan:");
+alert("Game made by soutpik karan ");
+// // name entry
 
 document.querySelector('#name--0').textContent = prompt("enter player 1");
 document.querySelector('#name--1').textContent = prompt("enter player 2");
@@ -68,9 +67,13 @@ holdButton.addEventListener('click',function()
     if(document.querySelector(`#score--${Math.abs(activePlayer-1)}`).textContent>= 30)
         {
             let playerWins = Math.abs(activePlayer-1);
-            alert(`player ${playerWins+1} wins`);
+
+            let playerWinsName = document.querySelector(`#name--${playerWins}`).textContent;
+            
+            alert(`${playerWinsName} wins the game`);
             newGameFunction();
         }
+
         console.log(FinalScore);
 });
 
