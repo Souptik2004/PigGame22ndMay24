@@ -6,12 +6,25 @@ alert("Game made by soutpik karan ");
 document.querySelector('#name--0').textContent = prompt("enter player 1");
 document.querySelector('#name--1').textContent = prompt("enter player 2");
 
+const modal = document.querySelector('.modal');
+const overlay = document.querySelector('.overlay');
+
+const closeFunction = function()
+{
+    modal.classList.add('hidden');
+    overlay.classList.add('hidden');
+}
+document.addEventListener('click',closeFunction);
+
+
 //generate random dice roll between 1 and 6
 
 const diceImage = document.querySelector('.dice');
 const diceRollButton = document.querySelector('.btn--roll');
 const holdButton = document.querySelector('.btn--hold');
 const newGameButton= document.querySelector('.btn--new');
+const closeButtonModal = document.querySelector('.close-modal');
+closeButtonModal.addEventListener('click',closeFunction);
 
 let activePlayer =0;
 let FinalScore =[0,0];
@@ -47,7 +60,7 @@ const diceRoll =function(){
 diceRollButton.addEventListener('click',function()
 {
     let rolledDiceNumber = diceRoll();
-    diceImage.classList.add('hidden');
+    //diceImage.classList.add('hidden');
 
     diceImage.src =`dice-${rolledDiceNumber}.png`;
     console.log(`dice-${rolledDiceNumber}.png`);
