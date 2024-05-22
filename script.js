@@ -2,9 +2,10 @@
 
 
 // name entry
+alert("Game made by Souptik Karan:");
 
-// document.querySelector('#name--0').textContent = prompt("enter player 1");
-// document.querySelector('#name--1').textContent = prompt("enter player 2");
+document.querySelector('#name--0').textContent = prompt("enter player 1");
+document.querySelector('#name--1').textContent = prompt("enter player 2");
 
 //generate random dice roll between 1 and 6
 
