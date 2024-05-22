@@ -8,6 +8,19 @@
     <title>Pig Game</title>
   </head>
   <body>
+    <div class="modal " >
+      <button class="close-modal">&times;</button>
+      <h1 class="rules-text">Rules</h1>
+      <p>
+
+        
+        The rule of the game is simple , you hae to roll the dice and get the score in the current score tab.
+        If you roll a 1 you lose all your points and the turn is over.and the current score will be zero as 
+        well as the control will be handed over to the next player. you can risk your score to win or play 
+        safe by handling low score . whoever got 30 points frist will win the game :]
+      </p>
+    </div>
+    <div class="overlay"></div>
     <main>
       <section class="player player--0 player--active">
         <h2 class="name" id="name--0">Player 1</h2>
@@ -26,7 +39,7 @@
         </div>
       </section>
 
-      <img src="dice-5.png" alt="Playing dice" class="dice" />
+      <img  src="dice-5.png" class="dice" />
       <button class="btn btn--new">🔄 New game</button>
       <button class="btn btn--roll">🎲 Roll dice</button>
       <button class="btn btn--hold">📥 Hold</button>
